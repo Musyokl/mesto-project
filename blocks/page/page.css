@@ -1,0 +1,12 @@
+.page {
+    font-family: "Inter", Helvetica, Arial, sans-serif;
+    background-color: black;
+    margin: 0 auto;
+    max-width: 880px;
+}
+
+@media (max-width: 903px) {
+    .page {
+        max-width: 320px;
+    }
+}

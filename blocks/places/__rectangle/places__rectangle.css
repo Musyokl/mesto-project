@@ -1,0 +1,7 @@
+.places__rectangle {
+    max-width: 241px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

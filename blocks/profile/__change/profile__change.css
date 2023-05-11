@@ -1,0 +1,23 @@
+.profile__change {
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+    margin-left: 18px;
+    border: 1px solid white;
+    background-color: black;
+    background: no-repeat url(../../../images/change-button.svg) center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.profile__change:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media (max-width: 903px) {
+    .profile__change {
+        width: 18px;
+        height: 18px;
+    }
+}
