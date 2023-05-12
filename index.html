@@ -2,31 +2,32 @@
 <head>
     <title>Mesto</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=0.1">
-    <link rel="stylesheet" href="./pages/index.css">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="pages/index.css">
 </head>
 <body class="page">
-    <section class="popup">
+    <section class="popup popup__opened">
         <form class="popup__container">
             <h2 class="popup__heading">Редактировать профиль</h2>
             <fieldset class="popup__fieldset">
-                <input type="text" class="popup__item popup__item_el_name">
-                <input type="text" class="popup__item popup__item_el_status">
+                <input type="text" class="popup__item popup__item_el_name" placeholder="Имя">
+                <input type="text" class="popup__item popup__item_el_status" placeholder="О себе">
                 <button class="popup__submit">Сохранить</button>
             </fieldset>
+            <button class="popup__close"></button>
         </form>
-        <button class="popup__close"></button>
     </section>
     <header class="header">
         <img class="header__logo" src="images/header__logo.svg" alt="лого Mesto.">
-        <div class="header__line"></div>
     </header>
     <main class="content">
         <section class="profile">
             <img class="profile__image" src="images/profile__image.png" alt="">
             <div class="profile__info">
-                <p class="profile__name">Жак-Ив Кусто</p>
-                <button class="profile__change"></button>
+                <div class="profile__rectangle">
+                    <p class="profile__name">Жак-Ив Кусто</p>
+                    <button class="profile__change"></button>
+                </div>
                 <p class="profile__status">Исследователь океана</p>
             </div>
             <button class="profile__add"></button>

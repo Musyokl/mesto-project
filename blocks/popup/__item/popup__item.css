@@ -4,4 +4,9 @@
     border-bottom: 1px solid black;
     display: block;
     width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.2;
+    height: 27px;
+    padding-top: 30px;
 }

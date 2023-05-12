@@ -6,5 +6,20 @@
     border: 0;
     background-color: black;
     color: white;
-    
+    font-size: 18px;
+    line-height: 1.2;
+    border-radius: 2px;
+    transition: opacity .3s ease-in;
+}
+
+.popup__submit:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+@media (max-width: 903px) {
+    .popup__submit {
+        margin-top: 45px;
+        font-size: 14px;
+    }
 }

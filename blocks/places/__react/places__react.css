@@ -7,6 +7,7 @@
     background-image: url(../../../images/reaction.svg);
     opacity: 1;
     transition: opacity 0.3s ease-in;
+    padding: 0;
 }
 
 .places__react:focus {
