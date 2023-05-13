@@ -1,7 +1,6 @@
 .profile__status {
     margin: 0;
     color: white;
-    max-width: 336px;
     font-size: 18px;
     line-height: 1.2;
 }
@@ -10,5 +9,7 @@
     .profile__status {
         font-size: 14px;
         text-align: center;
+        padding-top: 7px;
+        padding-right: 28px;
     }
 }
