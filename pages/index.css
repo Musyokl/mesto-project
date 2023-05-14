@@ -23,9 +23,9 @@
 @import url(../blocks/profile/__change/profile__change.css);
 @import url(../blocks/profile/__add/profile__add.css);
 @import url(../blocks/places/places.css);
-@import url(../blocks/places/__rectangle/places__rectangle.css);
-@import url(../blocks/places/__name/places__name.css);
-@import url(../blocks/places/__react/places__react.css);
+@import url(../blocks/item/__rectangle/item__rectangle.css);
+@import url(../blocks/item/__name/item__name.css);
+@import url(../blocks/item/__react/item__react.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

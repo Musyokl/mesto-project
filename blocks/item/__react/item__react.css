@@ -1,4 +1,4 @@
-.places__react {
+.item__react {
     margin-top: 30px;
     min-height: 19px;
     min-width: 22px;
@@ -10,11 +10,11 @@
     padding: 0;
 }
 
-.places__react:focus {
+.item__react:focus {
     background-image: url(../../../images/reaction-active.svg);
 }
 
-.places__react:hover {
+.item__react:hover {
     opacity: .5;
     cursor: pointer;
 }
