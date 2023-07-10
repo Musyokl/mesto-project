@@ -1,5 +1,6 @@
 .profile__rectangle {
     max-width: 336px;
+    min-width: 336px;
     display: flex;
     align-items: center;
 }
