@@ -4,6 +4,16 @@ const popupItem = document.querySelector('.popup-item');
 const popupPlace = document.querySelector('.popup-image');
 const itemContainer = document.querySelector('.places');
 const itemTemplate = document.querySelector('#item-template').content.querySelector('.item');
+const itemSubmit = popupItem.querySelector('.popup__submit');
+const itemFormElement = popupItem.querySelector('form');
+const imageInput = itemFormElement.querySelector('.popup__item_el_link');
+const placeInput = itemFormElement.querySelector('.popup__item_el_place');
+const profileFormElement = popupProfile.querySelector('form');
+const nameInput = profileFormElement.querySelector('.popup__item_el_name');
+const jobInput = profileFormElement.querySelector('.popup__item_el_status'); 
+const imagePopupPlace = popupPlace.querySelector('.popup-image__image');
+const nameProfile = profile.querySelector('.profile__name');
+const statusProfile = profile.querySelector('.profile__status');
 
 function openPopup (popup) {
   popup.classList.add('popup_opened');
@@ -29,13 +39,6 @@ popupItem.querySelector('.popup__close').addEventListener('click', function() {
   closePopup(popupItem);
 });
 
-const profileFormElement = popupProfile.querySelector('form');
-const nameInput = profileFormElement.querySelector('.popup__item_el_name');
-const jobInput = profileFormElement.querySelector('.popup__item_el_status'); 
-
-nameProfile = profile.querySelector('.profile__name');
-statusProfile = profile.querySelector('.profile__status');
-
 function profileSubmitHandler(evt) {
   evt.preventDefault();
 
@@ -46,6 +49,10 @@ function profileSubmitHandler(evt) {
 }
 
 profileFormElement.addEventListener('submit', profileSubmitHandler);
+
+popupPlace.querySelector('.popup__close').addEventListener('click', function() {
+  closePopup(popupPlace);
+}) 
 
 function createItem(imageValue, nameValue) {
   const itemElement = itemTemplate.cloneNode(true);
@@ -68,14 +75,10 @@ function createItem(imageValue, nameValue) {
 
   imageItem.addEventListener('click', function(evt) {
     openPopup(popupPlace);
-    popupPlace.querySelector('.popup-image__image').src = imageValue;
+    imagePopupPlace.src = imageValue;
     popupPlace.querySelector('.popup-image__name').textContent = nameValue;
-    popupPlace.querySelector('.popup-image__image').alt = nameValue;
+    imagePopupPlace.alt = nameValue;
   })
-
-  popupPlace.querySelector('.popup__close').addEventListener('click', function() {
-    closePopup(popupPlace);
-  }) 
 
   return itemElement;
 }
@@ -85,11 +88,6 @@ function addItem(imageValue, nameValue) {
   itemContainer.prepend(createItem(imageValue, nameValue));
 }
 
-const itemSubmit = popupItem.querySelector('.popup__submit');
-
-const itemFormElement = popupItem.querySelector('form');
-const imageInput = itemFormElement.querySelector('.popup__item_el_link');
-const placeInput = itemFormElement.querySelector('.popup__item_el_place');
 
 function itemSubmitHandler(evt) {
   evt.preventDefault();
@@ -101,8 +99,7 @@ function itemSubmitHandler(evt) {
 
   closePopup(popupItem);
 
-  imageInput.reset();
-  placeInput.reset();
+  itemFormElement.reset();
 }
 
 itemFormElement.addEventListener('submit', itemSubmitHandler);
